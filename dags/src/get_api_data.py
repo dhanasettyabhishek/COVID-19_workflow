@@ -6,7 +6,7 @@ import os
 
 class GetData:
 
-    def download_url(self) -> []:
+    def download_url(ds, **kwargs) -> []:
         url = "https://healthdata.gov/data.json"
         req = requests.get(url)
         data = json.loads(req.content.decode())
@@ -32,8 +32,10 @@ class GetData:
                                     download_urls.append(j['downloadURL'])
         return download_urls
 
-    def download_data(self, download_urls) -> None:
-        directory = "dataFiles2"
+    def download_data(**kwargs) -> None:
+        ti = kwargs['ti']
+        download_urls = ti.xcom_pull(task_ids='filter_covid_data')
+        directory = "dataFiles"
         if not os.path.exists(directory):
             os.makedirs(directory)
         count_path = 0
@@ -46,8 +48,7 @@ class GetData:
                 for line in response:
                     file.write(line)
 
+        print("========================> Downloaded " + str(count_path) + " files!")
 
-if __name__ == '__main__':
-    data = GetData()
-    urls = data.download_url()
-    data.download_data(urls)
+# urls = download_url()
+# download_data(urls)
