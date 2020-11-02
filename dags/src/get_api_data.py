@@ -4,17 +4,18 @@ import json
 import os
 
 
+
 class GetData:
 
     def download_url(ds, **kwargs) -> []:
     # def download_url(self) -> []:
         url = "https://healthdata.gov/data.json"
+        titles = []
         req = requests.get(url)
         data = json.loads(req.content.decode())
         covid = {'covid', 'covid-19', 'covid19'}
         state = {'state', 'states'}
         count = 0
-        titles = []
         download_urls = []
         for i in data['dataset']:
             if i['@type'] == 'dcat:Dataset' and i['accessLevel'] == 'public':
@@ -31,28 +32,29 @@ class GetData:
                                     count += 1
                                     titles.append((count, i['title']))
                                     download_urls.append(j['downloadURL'])
-        return download_urls
+        return download_urls, titles
 
     def download_data(**kwargs) -> None:
-    # def download_data(self, download_urls) -> None:
+    # def download_data(self, download_urls, titles) -> None:
         ti = kwargs['ti']
-        download_urls = ti.xcom_pull(task_ids='filter_covid_data')
+        download_urls, titles = ti.xcom_pull(task_ids='filter_covid_data')
         directory = "dataFiles"
         if not os.path.exists(directory):
             os.makedirs(directory)
         count_path = 0
-
         for i in download_urls:
-            count_path += 1
             response = requests.get(i)
-            filename = directory + "/" + "data" + str(count_path) + ".csv"
+            name = str(titles[count_path][1])
+            name = name.split(" ")
+            name = "".join(name)
+            filename = directory + "/" + name + ".csv"
+            count_path += 1
             with open(filename, 'wb') as file:
                 for line in response:
                     file.write(line)
 
         print("========================> Downloaded " + str(count_path) + " files!")
 
-
 # getData = GetData()
-# urls = getData.download_url()
-# getData.download_data(urls)
+# urls, titles = getData.download_url()
+# getData.download_data(urls, titles)
