@@ -1,431 +1,431 @@
 State,Place of Death,COVID19 Deaths,Pneumonia and COVID19 Deaths
-United States,"Healthcare Setting, Inpatient",138161,77045
-United States,"Healthcare Setting, Outpatient or Emergency Room",7325,2389
-United States,"Healthcare Setting, Dead on Arrival",197,51
+United States,Healthcare Setting Inpatient,138161,77045
+United States,Healthcare Setting Outpatient or Emergency Room,7325,2389
+United States,Healthcare Setting Dead on Arrival,197,51
 United States,Decedent's Home,11544,2449
 United States,Hospice Facility,6409,2995
 United States,Nursing Home or Long Term Care Facility,44862,10603
 United States,Other,3735,996
 United States,Place of Death Unknown,95,29
-Alabama,"Healthcare Setting, Inpatient",2773,1101
-Alabama,"Healthcare Setting, Outpatient or Emergency Room",115,13
-Alabama,"Healthcare Setting, Dead on Arrival",0,0
+Alabama,Healthcare Setting Inpatient,2773,1101
+Alabama,Healthcare Setting Outpatient or Emergency Room,115,13
+Alabama,Healthcare Setting Dead on Arrival,0,0
 Alabama,Decedent's Home,196,26
 Alabama,Hospice Facility,44,19
 Alabama,Nursing Home or Long Term Care Facility,623,75
 Alabama,Other,17,0
 Alabama,Place of Death Unknown,0,0
-Alaska,"Healthcare Setting, Inpatient",43,25
-Alaska,"Healthcare Setting, Outpatient or Emergency Room",0,0
-Alaska,"Healthcare Setting, Dead on Arrival",0,0
+Alaska,Healthcare Setting Inpatient,43,25
+Alaska,Healthcare Setting Outpatient or Emergency Room,0,0
+Alaska,Healthcare Setting Dead on Arrival,0,0
 Alaska,Decedent's Home,0,0
 Alaska,Hospice Facility,0,0
 Alaska,Nursing Home or Long Term Care Facility,0,0
 Alaska,Other,0,0
 Alaska,Place of Death Unknown,0,0
-Arizona,"Healthcare Setting, Inpatient",3446,2300
-Arizona,"Healthcare Setting, Outpatient or Emergency Room",134,45
-Arizona,"Healthcare Setting, Dead on Arrival",0,0
+Arizona,Healthcare Setting Inpatient,3446,2300
+Arizona,Healthcare Setting Outpatient or Emergency Room,134,45
+Arizona,Healthcare Setting Dead on Arrival,0,0
 Arizona,Decedent's Home,370,135
 Arizona,Hospice Facility,349,144
 Arizona,Nursing Home or Long Term Care Facility,507,187
 Arizona,Other,418,144
 Arizona,Place of Death Unknown,0,0
-Arkansas,"Healthcare Setting, Inpatient",1002,543
-Arkansas,"Healthcare Setting, Outpatient or Emergency Room",61,20
-Arkansas,"Healthcare Setting, Dead on Arrival",0,0
+Arkansas,Healthcare Setting Inpatient,1002,543
+Arkansas,Healthcare Setting Outpatient or Emergency Room,61,20
+Arkansas,Healthcare Setting Dead on Arrival,0,0
 Arkansas,Decedent's Home,70,21
 Arkansas,Hospice Facility,44,24
 Arkansas,Nursing Home or Long Term Care Facility,416,122
 Arkansas,Other,22,0
 Arkansas,Place of Death Unknown,0,0
-California,"Healthcare Setting, Inpatient",12529,8103
-California,"Healthcare Setting, Outpatient or Emergency Room",559,213
-California,"Healthcare Setting, Dead on Arrival",0,0
+California,Healthcare Setting Inpatient,12529,8103
+California,Healthcare Setting Outpatient or Emergency Room,559,213
+California,Healthcare Setting Dead on Arrival,0,0
 California,Decedent's Home,936,237
 California,Hospice Facility,30,12
 California,Nursing Home or Long Term Care Facility,2216,683
 California,Other,389,87
 California,Place of Death Unknown,0,0
-Colorado,"Healthcare Setting, Inpatient",1059,679
-Colorado,"Healthcare Setting, Outpatient or Emergency Room",35,21
-Colorado,"Healthcare Setting, Dead on Arrival",0,0
+Colorado,Healthcare Setting Inpatient,1059,679
+Colorado,Healthcare Setting Outpatient or Emergency Room,35,21
+Colorado,Healthcare Setting Dead on Arrival,0,0
 Colorado,Decedent's Home,146,44
 Colorado,Hospice Facility,38,21
 Colorado,Nursing Home or Long Term Care Facility,785,288
 Colorado,Other,30,0
 Colorado,Place of Death Unknown,0,0
-Connecticut,"Healthcare Setting, Inpatient",2263,716
-Connecticut,"Healthcare Setting, Outpatient or Emergency Room",124,18
-Connecticut,"Healthcare Setting, Dead on Arrival",0,0
+Connecticut,Healthcare Setting Inpatient,2263,716
+Connecticut,Healthcare Setting Outpatient or Emergency Room,124,18
+Connecticut,Healthcare Setting Dead on Arrival,0,0
 Connecticut,Decedent's Home,129,11
 Connecticut,Hospice Facility,45,15
 Connecticut,Nursing Home or Long Term Care Facility,1806,206
 Connecticut,Other,119,0
 Connecticut,Place of Death Unknown,0,0
-Delaware,"Healthcare Setting, Inpatient",308,172
-Delaware,"Healthcare Setting, Outpatient or Emergency Room",13,0
-Delaware,"Healthcare Setting, Dead on Arrival",0,0
+Delaware,Healthcare Setting Inpatient,308,172
+Delaware,Healthcare Setting Outpatient or Emergency Room,13,0
+Delaware,Healthcare Setting Dead on Arrival,0,0
 Delaware,Decedent's Home,29,0
 Delaware,Hospice Facility,0,0
 Delaware,Nursing Home or Long Term Care Facility,239,45
 Delaware,Other,0,0
 Delaware,Place of Death Unknown,0,0
-District of Columbia,"Healthcare Setting, Inpatient",620,598
-District of Columbia,"Healthcare Setting, Outpatient or Emergency Room",31,29
-District of Columbia,"Healthcare Setting, Dead on Arrival",0,0
+District of Columbia,Healthcare Setting Inpatient,620,598
+District of Columbia,Healthcare Setting Outpatient or Emergency Room,31,29
+District of Columbia,Healthcare Setting Dead on Arrival,0,0
 District of Columbia,Decedent's Home,40,32
 District of Columbia,Hospice Facility,24,20
 District of Columbia,Nursing Home or Long Term Care Facility,57,55
 District of Columbia,Other,11,10
 District of Columbia,Place of Death Unknown,0,0
-Florida,"Healthcare Setting, Inpatient",11244,6801
-Florida,"Healthcare Setting, Outpatient or Emergency Room",525,194
-Florida,"Healthcare Setting, Dead on Arrival",0,0
+Florida,Healthcare Setting Inpatient,11244,6801
+Florida,Healthcare Setting Outpatient or Emergency Room,525,194
+Florida,Healthcare Setting Dead on Arrival,0,0
 Florida,Decedent's Home,606,236
 Florida,Hospice Facility,2080,996
 Florida,Nursing Home or Long Term Care Facility,1025,270
 Florida,Other,572,244
 Florida,Place of Death Unknown,0,0
-Georgia,"Healthcare Setting, Inpatient",4636,2588
-Georgia,"Healthcare Setting, Outpatient or Emergency Room",310,93
-Georgia,"Healthcare Setting, Dead on Arrival",14,0
+Georgia,Healthcare Setting Inpatient,4636,2588
+Georgia,Healthcare Setting Outpatient or Emergency Room,310,93
+Georgia,Healthcare Setting Dead on Arrival,14,0
 Georgia,Decedent's Home,325,98
 Georgia,Hospice Facility,305,117
 Georgia,Nursing Home or Long Term Care Facility,1098,270
 Georgia,Other,58,15
 Georgia,Place of Death Unknown,0,0
-Hawaii,"Healthcare Setting, Inpatient",173,94
-Hawaii,"Healthcare Setting, Outpatient or Emergency Room",0,0
-Hawaii,"Healthcare Setting, Dead on Arrival",0,0
+Hawaii,Healthcare Setting Inpatient,173,94
+Hawaii,Healthcare Setting Outpatient or Emergency Room,0,0
+Hawaii,Healthcare Setting Dead on Arrival,0,0
 Hawaii,Decedent's Home,16,0
 Hawaii,Hospice Facility,0,0
 Hawaii,Nursing Home or Long Term Care Facility,36,0
 Hawaii,Other,0,0
 Hawaii,Place of Death Unknown,0,0
-Idaho,"Healthcare Setting, Inpatient",289,155
-Idaho,"Healthcare Setting, Outpatient or Emergency Room",10,0
-Idaho,"Healthcare Setting, Dead on Arrival",0,0
+Idaho,Healthcare Setting Inpatient,289,155
+Idaho,Healthcare Setting Outpatient or Emergency Room,10,0
+Idaho,Healthcare Setting Dead on Arrival,0,0
 Idaho,Decedent's Home,62,18
 Idaho,Hospice Facility,0,0
 Idaho,Nursing Home or Long Term Care Facility,204,47
 Idaho,Other,0,0
 Idaho,Place of Death Unknown,0,0
-Illinois,"Healthcare Setting, Inpatient",5798,3448
-Illinois,"Healthcare Setting, Outpatient or Emergency Room",332,108
-Illinois,"Healthcare Setting, Dead on Arrival",11,0
+Illinois,Healthcare Setting Inpatient,5798,3448
+Illinois,Healthcare Setting Outpatient or Emergency Room,332,108
+Illinois,Healthcare Setting Dead on Arrival,11,0
 Illinois,Decedent's Home,365,61
 Illinois,Hospice Facility,197,100
 Illinois,Nursing Home or Long Term Care Facility,1570,350
 Illinois,Other,186,44
 Illinois,Place of Death Unknown,0,0
-Indiana,"Healthcare Setting, Inpatient",2223,1389
-Indiana,"Healthcare Setting, Outpatient or Emergency Room",64,21
-Indiana,"Healthcare Setting, Dead on Arrival",0,0
+Indiana,Healthcare Setting Inpatient,2223,1389
+Indiana,Healthcare Setting Outpatient or Emergency Room,64,21
+Indiana,Healthcare Setting Dead on Arrival,0,0
 Indiana,Decedent's Home,161,36
 Indiana,Hospice Facility,63,40
 Indiana,Nursing Home or Long Term Care Facility,1579,281
 Indiana,Other,26,0
 Indiana,Place of Death Unknown,0,0
-Iowa,"Healthcare Setting, Inpatient",814,396
-Iowa,"Healthcare Setting, Outpatient or Emergency Room",33,0
-Iowa,"Healthcare Setting, Dead on Arrival",0,0
+Iowa,Healthcare Setting Inpatient,814,396
+Iowa,Healthcare Setting Outpatient or Emergency Room,33,0
+Iowa,Healthcare Setting Dead on Arrival,0,0
 Iowa,Decedent's Home,73,14
 Iowa,Hospice Facility,38,0
 Iowa,Nursing Home or Long Term Care Facility,667,66
 Iowa,Other,10,0
 Iowa,Place of Death Unknown,0,0
-Kansas,"Healthcare Setting, Inpatient",571,292
-Kansas,"Healthcare Setting, Outpatient or Emergency Room",28,0
-Kansas,"Healthcare Setting, Dead on Arrival",0,0
+Kansas,Healthcare Setting Inpatient,571,292
+Kansas,Healthcare Setting Outpatient or Emergency Room,28,0
+Kansas,Healthcare Setting Dead on Arrival,0,0
 Kansas,Decedent's Home,66,12
 Kansas,Hospice Facility,0,0
 Kansas,Nursing Home or Long Term Care Facility,282,70
 Kansas,Other,0,0
 Kansas,Place of Death Unknown,0,0
-Kentucky,"Healthcare Setting, Inpatient",1002,592
-Kentucky,"Healthcare Setting, Outpatient or Emergency Room",56,15
-Kentucky,"Healthcare Setting, Dead on Arrival",0,0
+Kentucky,Healthcare Setting Inpatient,1002,592
+Kentucky,Healthcare Setting Outpatient or Emergency Room,56,15
+Kentucky,Healthcare Setting Dead on Arrival,0,0
 Kentucky,Decedent's Home,57,18
 Kentucky,Hospice Facility,64,12
 Kentucky,Nursing Home or Long Term Care Facility,304,52
 Kentucky,Other,0,0
 Kentucky,Place of Death Unknown,0,0
-Louisiana,"Healthcare Setting, Inpatient",3681,1935
-Louisiana,"Healthcare Setting, Outpatient or Emergency Room",234,109
-Louisiana,"Healthcare Setting, Dead on Arrival",0,0
+Louisiana,Healthcare Setting Inpatient,3681,1935
+Louisiana,Healthcare Setting Outpatient or Emergency Room,234,109
+Louisiana,Healthcare Setting Dead on Arrival,0,0
 Louisiana,Decedent's Home,288,86
 Louisiana,Hospice Facility,195,102
 Louisiana,Nursing Home or Long Term Care Facility,741,290
 Louisiana,Other,53,14
 Louisiana,Place of Death Unknown,0,0
-Maine,"Healthcare Setting, Inpatient",77,27
-Maine,"Healthcare Setting, Outpatient or Emergency Room",0,0
-Maine,"Healthcare Setting, Dead on Arrival",0,0
+Maine,Healthcare Setting Inpatient,77,27
+Maine,Healthcare Setting Outpatient or Emergency Room,0,0
+Maine,Healthcare Setting Dead on Arrival,0,0
 Maine,Decedent's Home,11,0
 Maine,Hospice Facility,0,0
 Maine,Nursing Home or Long Term Care Facility,75,0
 Maine,Other,0,0
 Maine,Place of Death Unknown,0,0
-Maryland,"Healthcare Setting, Inpatient",2440,1204
-Maryland,"Healthcare Setting, Outpatient or Emergency Room",176,25
-Maryland,"Healthcare Setting, Dead on Arrival",0,0
+Maryland,Healthcare Setting Inpatient,2440,1204
+Maryland,Healthcare Setting Outpatient or Emergency Room,176,25
+Maryland,Healthcare Setting Dead on Arrival,0,0
 Maryland,Decedent's Home,185,33
 Maryland,Hospice Facility,370,138
 Maryland,Nursing Home or Long Term Care Facility,1090,205
 Maryland,Other,163,30
 Maryland,Place of Death Unknown,0,0
-Massachusetts,"Healthcare Setting, Inpatient",3992,2083
-Massachusetts,"Healthcare Setting, Outpatient or Emergency Room",182,45
-Massachusetts,"Healthcare Setting, Dead on Arrival",0,0
+Massachusetts,Healthcare Setting Inpatient,3992,2083
+Massachusetts,Healthcare Setting Outpatient or Emergency Room,182,45
+Massachusetts,Healthcare Setting Dead on Arrival,0,0
 Massachusetts,Decedent's Home,213,48
 Massachusetts,Hospice Facility,41,26
 Massachusetts,Nursing Home or Long Term Care Facility,3523,687
 Massachusetts,Other,236,31
 Massachusetts,Place of Death Unknown,0,0
-Michigan,"Healthcare Setting, Inpatient",4747,2734
-Michigan,"Healthcare Setting, Outpatient or Emergency Room",275,104
-Michigan,"Healthcare Setting, Dead on Arrival",0,0
+Michigan,Healthcare Setting Inpatient,4747,2734
+Michigan,Healthcare Setting Outpatient or Emergency Room,275,104
+Michigan,Healthcare Setting Dead on Arrival,0,0
 Michigan,Decedent's Home,359,93
 Michigan,Hospice Facility,176,37
 Michigan,Nursing Home or Long Term Care Facility,922,189
 Michigan,Other,62,26
 Michigan,Place of Death Unknown,36,0
-Minnesota,"Healthcare Setting, Inpatient",859,425
-Minnesota,"Healthcare Setting, Outpatient or Emergency Room",38,0
-Minnesota,"Healthcare Setting, Dead on Arrival",0,0
+Minnesota,Healthcare Setting Inpatient,859,425
+Minnesota,Healthcare Setting Outpatient or Emergency Room,38,0
+Minnesota,Healthcare Setting Dead on Arrival,0,0
 Minnesota,Decedent's Home,159,28
 Minnesota,Hospice Facility,0,0
 Minnesota,Nursing Home or Long Term Care Facility,1186,194
 Minnesota,Other,39,0
 Minnesota,Place of Death Unknown,0,0
-Mississippi,"Healthcare Setting, Inpatient",2293,1402
-Mississippi,"Healthcare Setting, Outpatient or Emergency Room",139,47
-Mississippi,"Healthcare Setting, Dead on Arrival",0,0
+Mississippi,Healthcare Setting Inpatient,2293,1402
+Mississippi,Healthcare Setting Outpatient or Emergency Room,139,47
+Mississippi,Healthcare Setting Dead on Arrival,0,0
 Mississippi,Decedent's Home,159,28
 Mississippi,Hospice Facility,13,0
 Mississippi,Nursing Home or Long Term Care Facility,500,132
 Mississippi,Other,17,0
 Mississippi,Place of Death Unknown,0,0
-Missouri,"Healthcare Setting, Inpatient",1707,847
-Missouri,"Healthcare Setting, Outpatient or Emergency Room",70,19
-Missouri,"Healthcare Setting, Dead on Arrival",0,0
+Missouri,Healthcare Setting Inpatient,1707,847
+Missouri,Healthcare Setting Outpatient or Emergency Room,70,19
+Missouri,Healthcare Setting Dead on Arrival,0,0
 Missouri,Decedent's Home,132,32
 Missouri,Hospice Facility,18,0
 Missouri,Nursing Home or Long Term Care Facility,870,143
 Missouri,Other,17,0
 Missouri,Place of Death Unknown,0,0
-Montana,"Healthcare Setting, Inpatient",177,90
-Montana,"Healthcare Setting, Outpatient or Emergency Room",0,0
-Montana,"Healthcare Setting, Dead on Arrival",0,0
+Montana,Healthcare Setting Inpatient,177,90
+Montana,Healthcare Setting Outpatient or Emergency Room,0,0
+Montana,Healthcare Setting Dead on Arrival,0,0
 Montana,Decedent's Home,20,0
 Montana,Hospice Facility,0,0
 Montana,Nursing Home or Long Term Care Facility,47,0
 Montana,Other,0,0
 Montana,Place of Death Unknown,0,0
-Nebraska,"Healthcare Setting, Inpatient",419,211
-Nebraska,"Healthcare Setting, Outpatient or Emergency Room",20,0
-Nebraska,"Healthcare Setting, Dead on Arrival",0,0
+Nebraska,Healthcare Setting Inpatient,419,211
+Nebraska,Healthcare Setting Outpatient or Emergency Room,20,0
+Nebraska,Healthcare Setting Dead on Arrival,0,0
 Nebraska,Decedent's Home,38,0
 Nebraska,Hospice Facility,0,0
 Nebraska,Nursing Home or Long Term Care Facility,130,35
 Nebraska,Other,29,0
 Nebraska,Place of Death Unknown,0,0
-Nevada,"Healthcare Setting, Inpatient",1250,1024
-Nevada,"Healthcare Setting, Outpatient or Emergency Room",52,31
-Nevada,"Healthcare Setting, Dead on Arrival",0,0
+Nevada,Healthcare Setting Inpatient,1250,1024
+Nevada,Healthcare Setting Outpatient or Emergency Room,52,31
+Nevada,Healthcare Setting Dead on Arrival,0,0
 Nevada,Decedent's Home,76,18
 Nevada,Hospice Facility,189,112
 Nevada,Nursing Home or Long Term Care Facility,33,22
 Nevada,Other,25,17
 Nevada,Place of Death Unknown,0,0
-New Hampshire,"Healthcare Setting, Inpatient",176,95
-New Hampshire,"Healthcare Setting, Outpatient or Emergency Room",0,0
-New Hampshire,"Healthcare Setting, Dead on Arrival",0,0
+New Hampshire,Healthcare Setting Inpatient,176,95
+New Hampshire,Healthcare Setting Outpatient or Emergency Room,0,0
+New Hampshire,Healthcare Setting Dead on Arrival,0,0
 New Hampshire,Decedent's Home,0,0
 New Hampshire,Hospice Facility,0,0
 New Hampshire,Nursing Home or Long Term Care Facility,249,23
 New Hampshire,Other,10,0
 New Hampshire,Place of Death Unknown,0,0
-New Jersey,"Healthcare Setting, Inpatient",8966,5220
-New Jersey,"Healthcare Setting, Outpatient or Emergency Room",452,139
-New Jersey,"Healthcare Setting, Dead on Arrival",23,0
+New Jersey,Healthcare Setting Inpatient,8966,5220
+New Jersey,Healthcare Setting Outpatient or Emergency Room,452,139
+New Jersey,Healthcare Setting Dead on Arrival,23,0
 New Jersey,Decedent's Home,674,125
 New Jersey,Hospice Facility,294,114
 New Jersey,Nursing Home or Long Term Care Facility,3884,1308
 New Jersey,Other,217,75
 New Jersey,Place of Death Unknown,0,0
-New Mexico,"Healthcare Setting, Inpatient",566,320
-New Mexico,"Healthcare Setting, Outpatient or Emergency Room",25,12
-New Mexico,"Healthcare Setting, Dead on Arrival",0,0
+New Mexico,Healthcare Setting Inpatient,566,320
+New Mexico,Healthcare Setting Outpatient or Emergency Room,25,12
+New Mexico,Healthcare Setting Dead on Arrival,0,0
 New Mexico,Decedent's Home,64,23
 New Mexico,Hospice Facility,0,0
 New Mexico,Nursing Home or Long Term Care Facility,184,28
 New Mexico,Other,13,0
 New Mexico,Place of Death Unknown,0,0
-New York,"Healthcare Setting, Inpatient",7217,4153
-New York,"Healthcare Setting, Outpatient or Emergency Room",340,115
-New York,"Healthcare Setting, Dead on Arrival",24,0
+New York,Healthcare Setting Inpatient,7217,4153
+New York,Healthcare Setting Outpatient or Emergency Room,340,115
+New York,Healthcare Setting Dead on Arrival,24,0
 New York,Decedent's Home,562,154
 New York,Hospice Facility,441,294
 New York,Nursing Home or Long Term Care Facility,3084,901
 New York,Other,176,40
 New York,Place of Death Unknown,0,0
-New York City,"Healthcare Setting, Inpatient",15121,6633
-New York City,"Healthcare Setting, Outpatient or Emergency Room",1381,527
-New York City,"Healthcare Setting, Dead on Arrival",24,0
+New York City,Healthcare Setting Inpatient,15121,6633
+New York City,Healthcare Setting Outpatient or Emergency Room,1381,527
+New York City,Healthcare Setting Dead on Arrival,24,0
 New York City,Decedent's Home,1941,94
 New York City,Hospice Facility,12,0
 New York City,Nursing Home or Long Term Care Facility,2348,730
 New York City,Other,40,0
 New York City,Place of Death Unknown,0,0
-North Carolina,"Healthcare Setting, Inpatient",1748,865
-North Carolina,"Healthcare Setting, Outpatient or Emergency Room",56,16
-North Carolina,"Healthcare Setting, Dead on Arrival",0,0
+North Carolina,Healthcare Setting Inpatient,1748,865
+North Carolina,Healthcare Setting Outpatient or Emergency Room,56,16
+North Carolina,Healthcare Setting Dead on Arrival,0,0
 North Carolina,Decedent's Home,118,28
 North Carolina,Hospice Facility,65,26
 North Carolina,Nursing Home or Long Term Care Facility,697,135
 North Carolina,Other,34,0
 North Carolina,Place of Death Unknown,0,0
-North Dakota,"Healthcare Setting, Inpatient",207,140
-North Dakota,"Healthcare Setting, Outpatient or Emergency Room",0,0
-North Dakota,"Healthcare Setting, Dead on Arrival",0,0
+North Dakota,Healthcare Setting Inpatient,207,140
+North Dakota,Healthcare Setting Outpatient or Emergency Room,0,0
+North Dakota,Healthcare Setting Dead on Arrival,0,0
 North Dakota,Decedent's Home,15,0
 North Dakota,Hospice Facility,0,0
 North Dakota,Nursing Home or Long Term Care Facility,150,29
 North Dakota,Other,0,0
 North Dakota,Place of Death Unknown,0,0
-Ohio,"Healthcare Setting, Inpatient",2573,1396
-Ohio,"Healthcare Setting, Outpatient or Emergency Room",106,34
-Ohio,"Healthcare Setting, Dead on Arrival",0,0
+Ohio,Healthcare Setting Inpatient,2573,1396
+Ohio,Healthcare Setting Outpatient or Emergency Room,106,34
+Ohio,Healthcare Setting Dead on Arrival,0,0
 Ohio,Decedent's Home,174,57
 Ohio,Hospice Facility,275,147
 Ohio,Nursing Home or Long Term Care Facility,1700,447
 Ohio,Other,55,12
 Ohio,Place of Death Unknown,0,0
-Oklahoma,"Healthcare Setting, Inpatient",963,470
-Oklahoma,"Healthcare Setting, Outpatient or Emergency Room",63,11
-Oklahoma,"Healthcare Setting, Dead on Arrival",0,0
+Oklahoma,Healthcare Setting Inpatient,963,470
+Oklahoma,Healthcare Setting Outpatient or Emergency Room,63,11
+Oklahoma,Healthcare Setting Dead on Arrival,0,0
 Oklahoma,Decedent's Home,89,16
 Oklahoma,Hospice Facility,0,0
 Oklahoma,Nursing Home or Long Term Care Facility,276,45
 Oklahoma,Other,24,0
 Oklahoma,Place of Death Unknown,0,0
-Oregon,"Healthcare Setting, Inpatient",302,138
-Oregon,"Healthcare Setting, Outpatient or Emergency Room",22,0
-Oregon,"Healthcare Setting, Dead on Arrival",0,0
+Oregon,Healthcare Setting Inpatient,302,138
+Oregon,Healthcare Setting Outpatient or Emergency Room,22,0
+Oregon,Healthcare Setting Dead on Arrival,0,0
 Oregon,Decedent's Home,60,13
 Oregon,Hospice Facility,0,0
 Oregon,Nursing Home or Long Term Care Facility,199,38
 Oregon,Other,12,0
 Oregon,Place of Death Unknown,0,0
-Pennsylvania,"Healthcare Setting, Inpatient",4437,2346
-Pennsylvania,"Healthcare Setting, Outpatient or Emergency Room",156,41
-Pennsylvania,"Healthcare Setting, Dead on Arrival",0,0
+Pennsylvania,Healthcare Setting Inpatient,4437,2346
+Pennsylvania,Healthcare Setting Outpatient or Emergency Room,156,41
+Pennsylvania,Healthcare Setting Dead on Arrival,0,0
 Pennsylvania,Decedent's Home,304,72
 Pennsylvania,Hospice Facility,190,89
 Pennsylvania,Nursing Home or Long Term Care Facility,3740,620
 Pennsylvania,Other,32,0
 Pennsylvania,Place of Death Unknown,0,0
-Rhode Island,"Healthcare Setting, Inpatient",354,199
-Rhode Island,"Healthcare Setting, Outpatient or Emergency Room",23,10
-Rhode Island,"Healthcare Setting, Dead on Arrival",0,0
+Rhode Island,Healthcare Setting Inpatient,354,199
+Rhode Island,Healthcare Setting Outpatient or Emergency Room,23,10
+Rhode Island,Healthcare Setting Dead on Arrival,0,0
 Rhode Island,Decedent's Home,37,0
 Rhode Island,Hospice Facility,103,76
 Rhode Island,Nursing Home or Long Term Care Facility,568,132
 Rhode Island,Other,0,0
 Rhode Island,Place of Death Unknown,35,15
-South Carolina,"Healthcare Setting, Inpatient",2403,1276
-South Carolina,"Healthcare Setting, Outpatient or Emergency Room",119,28
-South Carolina,"Healthcare Setting, Dead on Arrival",0,0
+South Carolina,Healthcare Setting Inpatient,2403,1276
+South Carolina,Healthcare Setting Outpatient or Emergency Room,119,28
+South Carolina,Healthcare Setting Dead on Arrival,0,0
 South Carolina,Decedent's Home,208,48
 South Carolina,Hospice Facility,207,68
 South Carolina,Nursing Home or Long Term Care Facility,654,124
 South Carolina,Other,29,0
 South Carolina,Place of Death Unknown,0,0
-South Dakota,"Healthcare Setting, Inpatient",212,125
-South Dakota,"Healthcare Setting, Outpatient or Emergency Room",10,0
-South Dakota,"Healthcare Setting, Dead on Arrival",0,0
+South Dakota,Healthcare Setting Inpatient,212,125
+South Dakota,Healthcare Setting Outpatient or Emergency Room,10,0
+South Dakota,Healthcare Setting Dead on Arrival,0,0
 South Dakota,Decedent's Home,16,0
 South Dakota,Hospice Facility,19,0
 South Dakota,Nursing Home or Long Term Care Facility,118,29
 South Dakota,Other,0,0
 South Dakota,Place of Death Unknown,0,0
-Tennessee,"Healthcare Setting, Inpatient",2199,1258
-Tennessee,"Healthcare Setting, Outpatient or Emergency Room",117,36
-Tennessee,"Healthcare Setting, Dead on Arrival",16,0
+Tennessee,Healthcare Setting Inpatient,2199,1258
+Tennessee,Healthcare Setting Outpatient or Emergency Room,117,36
+Tennessee,Healthcare Setting Dead on Arrival,16,0
 Tennessee,Decedent's Home,130,34
 Tennessee,Hospice Facility,60,36
 Tennessee,Nursing Home or Long Term Care Facility,412,107
 Tennessee,Other,25,0
 Tennessee,Place of Death Unknown,0,0
-Texas,"Healthcare Setting, Inpatient",13212,7927
-Texas,"Healthcare Setting, Outpatient or Emergency Room",638,158
-Texas,"Healthcare Setting, Dead on Arrival",11,0
+Texas,Healthcare Setting Inpatient,13212,7927
+Texas,Healthcare Setting Outpatient or Emergency Room,638,158
+Texas,Healthcare Setting Dead on Arrival,11,0
 Texas,Decedent's Home,1282,232
 Texas,Hospice Facility,204,104
 Texas,Nursing Home or Long Term Care Facility,2060,579
 Texas,Other,299,85
 Texas,Place of Death Unknown,0,0
-Utah,"Healthcare Setting, Inpatient",329,180
-Utah,"Healthcare Setting, Outpatient or Emergency Room",0,0
-Utah,"Healthcare Setting, Dead on Arrival",0,0
+Utah,Healthcare Setting Inpatient,329,180
+Utah,Healthcare Setting Outpatient or Emergency Room,0,0
+Utah,Healthcare Setting Dead on Arrival,0,0
 Utah,Decedent's Home,62,15
 Utah,Hospice Facility,0,0
 Utah,Nursing Home or Long Term Care Facility,168,21
 Utah,Other,14,0
 Utah,Place of Death Unknown,0,0
-Vermont,"Healthcare Setting, Inpatient",28,13
-Vermont,"Healthcare Setting, Outpatient or Emergency Room",0,0
-Vermont,"Healthcare Setting, Dead on Arrival",0,0
+Vermont,Healthcare Setting Inpatient,28,13
+Vermont,Healthcare Setting Outpatient or Emergency Room,0,0
+Vermont,Healthcare Setting Dead on Arrival,0,0
 Vermont,Decedent's Home,0,0
 Vermont,Hospice Facility,0,0
 Vermont,Nursing Home or Long Term Care Facility,31,0
 Vermont,Other,0,0
 Vermont,Place of Death Unknown,0,0
-Virginia,"Healthcare Setting, Inpatient",2183,1093
-Virginia,"Healthcare Setting, Outpatient or Emergency Room",92,22
-Virginia,"Healthcare Setting, Dead on Arrival",0,0
+Virginia,Healthcare Setting Inpatient,2183,1093
+Virginia,Healthcare Setting Outpatient or Emergency Room,92,22
+Virginia,Healthcare Setting Dead on Arrival,0,0
 Virginia,Decedent's Home,179,29
 Virginia,Hospice Facility,50,21
 Virginia,Nursing Home or Long Term Care Facility,909,89
 Virginia,Other,43,0
 Virginia,Place of Death Unknown,0,0
-Washington,"Healthcare Setting, Inpatient",1209,766
-Washington,"Healthcare Setting, Outpatient or Emergency Room",29,11
-Washington,"Healthcare Setting, Dead on Arrival",0,0
+Washington,Healthcare Setting Inpatient,1209,766
+Washington,Healthcare Setting Outpatient or Emergency Room,29,11
+Washington,Healthcare Setting Dead on Arrival,0,0
 Washington,Decedent's Home,170,68
 Washington,Hospice Facility,58,24
 Washington,Nursing Home or Long Term Care Facility,551,178
 Washington,Other,38,15
 Washington,Place of Death Unknown,0,0
-West Virginia,"Healthcare Setting, Inpatient",226,105
-West Virginia,"Healthcare Setting, Outpatient or Emergency Room",0,0
-West Virginia,"Healthcare Setting, Dead on Arrival",0,0
+West Virginia,Healthcare Setting Inpatient,226,105
+West Virginia,Healthcare Setting Outpatient or Emergency Room,0,0
+West Virginia,Healthcare Setting Dead on Arrival,0,0
 West Virginia,Decedent's Home,10,0
 West Virginia,Hospice Facility,0,0
 West Virginia,Nursing Home or Long Term Care Facility,101,14
 West Virginia,Other,0,0
 West Virginia,Place of Death Unknown,0,0
-Wisconsin,"Healthcare Setting, Inpatient",1061,332
-Wisconsin,"Healthcare Setting, Outpatient or Emergency Room",38,0
-Wisconsin,"Healthcare Setting, Dead on Arrival",0,0
+Wisconsin,Healthcare Setting Inpatient,1061,332
+Wisconsin,Healthcare Setting Outpatient or Emergency Room,38,0
+Wisconsin,Healthcare Setting Dead on Arrival,0,0
 Wisconsin,Decedent's Home,139,23
 Wisconsin,Hospice Facility,69,15
 Wisconsin,Nursing Home or Long Term Care Facility,235,38
 Wisconsin,Other,130,14
 Wisconsin,Place of Death Unknown,0,0
-Wyoming,"Healthcare Setting, Inpatient",34,21
-Wyoming,"Healthcare Setting, Outpatient or Emergency Room",0,0
-Wyoming,"Healthcare Setting, Dead on Arrival",0,0
+Wyoming,Healthcare Setting Inpatient,34,21
+Wyoming,Healthcare Setting Outpatient or Emergency Room,0,0
+Wyoming,Healthcare Setting Dead on Arrival,0,0
 Wyoming,Decedent's Home,0,0
 Wyoming,Hospice Facility,0,0
 Wyoming,Nursing Home or Long Term Care Facility,11,0
 Wyoming,Other,0,0
 Wyoming,Place of Death Unknown,0,0
-Puerto Rico,"Healthcare Setting, Inpatient",631,0
-Puerto Rico,"Healthcare Setting, Outpatient or Emergency Room",41,0
-Puerto Rico,"Healthcare Setting, Dead on Arrival",0,0
+Puerto Rico,Healthcare Setting Inpatient,631,0
+Puerto Rico,Healthcare Setting Outpatient or Emergency Room,41,0
+Puerto Rico,Healthcare Setting Dead on Arrival,0,0
 Puerto Rico,Decedent's Home,15,0
 Puerto Rico,Hospice Facility,0,0
 Puerto Rico,Nursing Home or Long Term Care Facility,11,0

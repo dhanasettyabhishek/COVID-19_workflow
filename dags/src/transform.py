@@ -182,6 +182,7 @@ class TransformData:
             print('Could not read ' + path)
 
         truncated_data5 = data5.loc[:, ['State', 'Place of Death', 'COVID19 Deaths', 'Pneumonia and COVID19 Deaths']]
+        truncated_data5["Place of Death"] = truncated_data5["Place of Death"].str.replace(',', '')
         truncated_data5[['COVID19 Deaths', 'Pneumonia and COVID19 Deaths']] = truncated_data5[
             ['COVID19 Deaths', 'Pneumonia and COVID19 Deaths']].fillna(0)
         truncated_data5[['COVID19 Deaths', 'Pneumonia and COVID19 Deaths']] = truncated_data5[
