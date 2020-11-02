@@ -1,11 +1,11 @@
 import psycopg2 as pgsql
-connection = "dbname=covid_data port = 5432 user=postgres password=abhishek host=localhost"
+connection = "dbname=airflow port = 5432 user=airflow password=airflow host=postgres"
 class LoadData:
     
     def load_data1(ds, **kwargs):
         conn = pgsql.connect(connection)
         curr = conn.cursor()
-        curr.execute("CREATE SCHEMA IF NOT EXISTS covid AUTHORIZATION postgres")
+        curr.execute("CREATE SCHEMA IF NOT EXISTS covid")
         curr.execute("DROP TABLE IF EXISTS covid.truncated_data1")
         curr.execute("""CREATE TABLE covid.truncated_data1(
             end_week date,
@@ -24,6 +24,7 @@ class LoadData:
     def load_data2(ds, **kwargs):
         conn = pgsql.connect(connection)
         curr = conn.cursor()
+        curr.execute("CREATE SCHEMA IF NOT EXISTS covid")
         curr.execute("DROP TABLE IF EXISTS covid.truncated_data2")
         curr.execute("""CREATE TABLE covid.truncated_data2(
             submission_date date,
@@ -43,6 +44,7 @@ class LoadData:
     def states(ds, **kwargs):
         conn = pgsql.connect(connection)
         curr = conn.cursor()
+        curr.execute("CREATE SCHEMA IF NOT EXISTS covid")
         curr.execute("DROP TABLE IF EXISTS covid.states")
         curr.execute("""CREATE TABLE covid.states(
             fips_code integer,
@@ -60,6 +62,7 @@ class LoadData:
     def load_data3(ds, **kwargs):
         conn = pgsql.connect(connection)
         curr = conn.cursor()
+        curr.execute("CREATE SCHEMA IF NOT EXISTS covid")
         curr.execute("DROP TABLE IF EXISTS covid.truncated_data3")
         curr.execute("""CREATE TABLE covid.truncated_data3(
             fips_code integer,
@@ -75,6 +78,7 @@ class LoadData:
     def sex(ds, **kwargs):
         conn = pgsql.connect(connection)
         curr = conn.cursor()
+        curr.execute("CREATE SCHEMA IF NOT EXISTS covid")
         curr.execute("DROP TABLE IF EXISTS covid.sex")
         curr.execute("""CREATE TABLE covid.sex(
             sex text)""")
@@ -88,6 +92,7 @@ class LoadData:
     def age_groups(ds, **kwargs):
         conn = pgsql.connect(connection)
         curr = conn.cursor()
+        curr.execute("CREATE SCHEMA IF NOT EXISTS covid")
         curr.execute("DROP TABLE IF EXISTS covid.age_groups")
         curr.execute("""CREATE TABLE covid.age_groups(
             age_groups text)""")
@@ -101,6 +106,7 @@ class LoadData:
     def load_data4(ds, **kwargs):
         conn = pgsql.connect(connection)
         curr = conn.cursor()
+        curr.execute("CREATE SCHEMA IF NOT EXISTS covid")
         curr.execute("DROP TABLE IF EXISTS covid.truncated_data4")
         curr.execute("""CREATE TABLE covid.truncated_data4(
             state text,
@@ -119,6 +125,7 @@ class LoadData:
     def start(ds, **kwargs):
         conn = pgsql.connect(connection)
         curr = conn.cursor()
+        curr.execute("CREATE SCHEMA IF NOT EXISTS covid")
         curr.execute("DROP TABLE IF EXISTS covid.start")
         curr.execute("""CREATE TABLE covid.start(
             start_date date)""")
@@ -132,6 +139,7 @@ class LoadData:
     def end(ds, **kwargs):
         conn = pgsql.connect(connection)
         curr = conn.cursor()
+        curr.execute("CREATE SCHEMA IF NOT EXISTS covid")
         curr.execute("DROP TABLE IF EXISTS covid.end")
         curr.execute("""CREATE TABLE covid.end(
             end_date date)
@@ -146,6 +154,7 @@ class LoadData:
     def place_of_death(ds, **kwargs):
         conn = pgsql.connect(connection)
         curr = conn.cursor()
+        curr.execute("CREATE SCHEMA IF NOT EXISTS covid")
         curr.execute("DROP TABLE IF EXISTS covid.place_of_death")
         curr.execute("""CREATE TABLE covid.place_of_death(
             place_of_death text)""")
@@ -159,6 +168,7 @@ class LoadData:
     def load_data5(ds, **kwargs):
         conn = pgsql.connect(connection)
         curr = conn.cursor()
+        curr.execute("CREATE SCHEMA IF NOT EXISTS covid")
         curr.execute("DROP TABLE IF EXISTS covid.truncated_data5")
         curr.execute("""CREATE TABLE covid.truncated_data5(
             state text,
@@ -176,6 +186,7 @@ class LoadData:
     def race(ds, **kwargs):
         conn = pgsql.connect(connection)
         curr = conn.cursor()
+        curr.execute("CREATE SCHEMA IF NOT EXISTS covid")
         curr.execute("DROP TABLE IF EXISTS covid.race")
         curr.execute("""CREATE TABLE covid.race(
             race text)""")
@@ -189,6 +200,7 @@ class LoadData:
     def load_data6(ds, **kwargs):
         conn = pgsql.connect(connection)
         curr = conn.cursor()
+        curr.execute("CREATE SCHEMA IF NOT EXISTS covid")
         curr.execute("DROP TABLE IF EXISTS covid.truncated_data6")
         curr.execute("""CREATE TABLE covid.truncated_data6(
             state text,
