@@ -1,8 +1,9 @@
 import psycopg2 as pgsql
 import os
 
+
 connection = "dbname=airflow port = 5432 user=airflow password=airflow host=postgres"
-# connection = "dbname=test3 port = 5432 user=postgres password=abhishek host=localhost"
+# connection = "dbname=covid_workflow port = 5432 user=postgres password=abhishek host=localhost"
 
 def load_data_to_postgres(file_path:str, create:str) -> None:
     """
@@ -234,8 +235,8 @@ class LoadData:
 
 
 # ld = LoadData()
-# ld.county_data()
-# ld.probability_of_new_cases_data()
+# ld.load_county_data()
+# ld.load_probability_of_new_cases_data()
 # ld.load_age_and_sex_data()
 # ld.load_weekly_data()
 # ld.load_place_of_death()
@@ -245,5 +246,5 @@ class LoadData:
 # ld.start()
 # ld.end()
 # ld.sex()
-# ld.place_of_death()
+# ld.place_of_death_postgres()
 # ld.age_groups()
