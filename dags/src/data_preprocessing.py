@@ -338,3 +338,11 @@ class DataPreprocessing:
     #     dp = DataPreprocessing()
     #     for f in dp.functions:
     #         f(dp)
+
+dp = DataPreprocessing()
+dp.race_data()
+dp.place_of_death()
+dp.county_data()
+dp.age_and_sex_data()
+dp.probability_of_new_cases_data()
+dp.weekly_data()

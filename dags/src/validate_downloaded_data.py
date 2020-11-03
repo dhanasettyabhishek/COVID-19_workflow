@@ -54,3 +54,6 @@ class Validations:
                 copying_data_to_downloaded_data(filename, "county_data", county_count)
             elif len(columns.intersection(probability_of_new_cases)) == 2:
                 copying_data_to_downloaded_data(filename, "probability_of_new_cases_data",probability_of_new_cases_count)
+
+# vd = Validations()
+# vd.validate_downloaded_data()

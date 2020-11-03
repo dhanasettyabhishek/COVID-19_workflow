@@ -7,6 +7,7 @@ from typing import Tuple, List
 
 class GetData:
 
+
     def download_url(ds, **kwargs) -> Tuple[List, List]:
         """
         Filter's covid data from healthdata,
