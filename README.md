@@ -12,12 +12,12 @@
  </ol>
   
 
-The main idea is to bring in daily data for COVID-19 for all the states, and store the information in PostgresSQL.
+The main idea is to bring in daily data for COVID-19 for all the states and store the information in PostgresSQL.
 
 The data is collected from the website,
 Website: https://healthdata.gov/data.json
 
-####Steps:
+#### Steps:
 <ol>
 <li> Parse through the HeathData API, data.json file and filter COVID related titles. 
 </li>
@@ -31,12 +31,12 @@ Website: https://healthdata.gov/data.json
 </li>
 </ol>
 
-The flow of the data, is as follows.
+The flow of the data is as follows.
 
 ![workflow](https://github.com/dhanasettyabhishek/COVID-19_workflow/blob/master/config/other/workflow.png?raw=true)
 
 
-####Key factors:
+#### Key factors:
 <ol>
 <li>The workflow can be scaled to large amounts of data</li>
 <li>Parallelized the workflow, based on the task status</li>
