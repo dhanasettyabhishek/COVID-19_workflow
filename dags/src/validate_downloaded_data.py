@@ -11,6 +11,13 @@ probability_of_new_cases = {"pnew_case", "pnew_death"}
 
 
 def copying_data_to_downloaded_data(file_path, folder_name, idx) -> None:
+    """
+    Copying data to a downloaded data folder.
+    :param file_path: Path
+    :param folder_name: Folder name
+    :param idx: count
+    :return: None
+    """
     path = "downloadedData/" + folder_name
     try:
         os.makedirs(path)
@@ -23,7 +30,12 @@ def copying_data_to_downloaded_data(file_path, folder_name, idx) -> None:
 
 class Validations:
 
-    def validate_downloaded_data(ds, **kwargs):
+    def validate_downloaded_data(ds, **kwargs)->None:
+        """
+        Validates downloaded data
+        :param kwargs: Keyword argument
+        :return: None
+        """
         for filename in os.listdir("dataFiles"):
             filename = "dataFiles/" + filename
             data = pd.read_csv(filename, nrows=0)

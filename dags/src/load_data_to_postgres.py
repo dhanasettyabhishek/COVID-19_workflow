@@ -4,7 +4,13 @@ import os
 connection = "dbname=airflow port = 5432 user=airflow password=airflow host=postgres"
 # connection = "dbname=test3 port = 5432 user=postgres password=abhishek host=localhost"
 
-def load_data_to_postgres(file_path, create):
+def load_data_to_postgres(file_path:str, create:str) -> None:
+    """
+    Loads data to postgresSQL.
+    :param file_path: path
+    :param create: SQL query
+    :return: None
+    """
     conn = pgsql.connect(connection)
     curr = conn.cursor()
     curr.execute("CREATE SCHEMA IF NOT EXISTS covid")
@@ -27,37 +33,72 @@ def load_data_to_postgres(file_path, create):
 
 class LoadData:
 
-    def load_weekly_data(ds, **kwargs):
+    def load_weekly_data(ds, **kwargs)->None:
+        """
+        Loads weekly data to PostgresSQL.
+        :param kwargs: keyword argument
+        :return: None
+        """
         create = "(end_week date,start_week date,state text,covid_deaths integer,pneumonia_covid_deaths integer)"
         file_path = "weekly_data"
         load_data_to_postgres(file_path, create)
 
-    def load_probability_of_new_cases_data(ds, **kwargs):
+    def load_probability_of_new_cases_data(ds, **kwargs)->None:
+        """
+        Loads probability data to PostgresSQL.
+        :param kwargs: keyword argument
+        :return: None
+        """
         create = "(submission_date date,state text,new_case integer,pnew_case integer,new_death integer,prob_death integer)"
         file_path = "probability_of_new_cases_data"
         load_data_to_postgres(file_path, create)
 
-    def load_county_data(ds, **kwargs):
+    def load_county_data(ds, **kwargs)->None:
+        """
+        Loads county data to PostgresSQL.
+        :param kwargs: keyword argument
+        :return: None
+        """
         create = "(fips_code integer,covid_deaths integer)"
         file_path = "county_data"
         load_data_to_postgres(file_path, create)
 
-    def load_age_and_sex_data(ds, **kwargs):
+    def load_age_and_sex_data(ds, **kwargs)->None:
+        """
+        Loads age and sex data to PostgresSQL.
+        :param kwargs: keyword argument
+        :return: None
+        """
         file_path = "age_and_sex_data"
         create = "(state text,sex text,age_groups text,covid_deaths integer,pneumonia_covid_deaths integer)"
         load_data_to_postgres(file_path, create)
 
-    def load_place_of_death(ds, **kwargs):
+    def load_place_of_death(ds, **kwargs)->None:
+        """
+        Loads place of death data to PostgresSQL.
+        :param kwargs: keyword argument
+        :return: None
+        """
         file_path = "place_of_death"
         create = "(state text,place_of_death text,covid_deaths integer,pneumonia_covid_deaths integer)"
         load_data_to_postgres(file_path, create)
 
-    def load_race_data(ds, **kwargs):
+    def load_race_data(ds, **kwargs)->None:
+        """
+        Loads race data to PostgresSQL.
+        :param kwargs: keyword argument
+        :return: None
+        """
         file_path = "age_and_sex_data"
         create = "(state text,age_groups text,race text,covid_deaths integer,pneumonia_covid_deaths integer)"
         load_data_to_postgres(file_path, create)
 
-    def race(ds, **kwargs):
+    def race(ds, **kwargs)->None:
+        """
+        Loads different race type into PostgresSQL.
+        :param kwargs: keyword argument
+        :return: None
+        """
         conn = pgsql.connect(connection)
         curr = conn.cursor()
         curr.execute("CREATE SCHEMA IF NOT EXISTS covid")
@@ -71,7 +112,12 @@ class LoadData:
         curr.close()
         conn.close()
 
-    def start(ds, **kwargs):
+    def start(ds, **kwargs)->None:
+        """
+        Loads start date into PostgresSQL.
+        :param kwargs: keyword argument
+        :return: None
+        """
         conn = pgsql.connect(connection)
         curr = conn.cursor()
         curr.execute("CREATE SCHEMA IF NOT EXISTS covid")
@@ -85,7 +131,12 @@ class LoadData:
         curr.close()
         conn.close()
 
-    def end(ds, **kwargs):
+    def end(ds, **kwargs)->None:
+        """
+        Loads end date into PostgresSQL.
+        :param kwargs: keyword argument
+        :return: None
+        """
         conn = pgsql.connect(connection)
         curr = conn.cursor()
         curr.execute("CREATE SCHEMA IF NOT EXISTS covid")
@@ -100,7 +151,12 @@ class LoadData:
         curr.close()
         conn.close()
 
-    def place_of_death_postgres(ds, **kwargs):
+    def place_of_death_postgres(ds, **kwargs)->None:
+        """
+        Loads unique place of deaths into PostgresSQL.
+        :param kwargs: keyword argument
+        :return: None
+        """
         conn = pgsql.connect(connection)
         curr = conn.cursor()
         curr.execute("CREATE SCHEMA IF NOT EXISTS covid")
@@ -114,7 +170,12 @@ class LoadData:
         curr.close()
         conn.close()
 
-    def sex(ds, **kwargs):
+    def sex(ds, **kwargs)->None:
+        """
+        Loads unique sex listed into PostgresSQL.
+        :param kwargs: keyword argument
+        :return: None
+        """
         conn = pgsql.connect(connection)
         curr = conn.cursor()
         curr.execute("CREATE SCHEMA IF NOT EXISTS covid")
@@ -128,7 +189,12 @@ class LoadData:
         curr.close()
         conn.close()
 
-    def age_groups(ds, **kwargs):
+    def age_groups(ds, **kwargs)->None:
+        """
+        Loads unique age groups into PostgresSQL.
+        :param kwargs: keyword argument
+        :return: None
+        """
         conn = pgsql.connect(connection)
         curr = conn.cursor()
         curr.execute("CREATE SCHEMA IF NOT EXISTS covid")
@@ -142,7 +208,12 @@ class LoadData:
         curr.close()
         conn.close()
 
-    def states(ds, **kwargs):
+    def states(ds, **kwargs)->None:
+        """
+        Loads unique states into PostgresSQL.
+        :param kwargs: keyword argument
+        :return: None
+        """
         conn = pgsql.connect(connection)
         curr = conn.cursor()
         curr.execute("CREATE SCHEMA IF NOT EXISTS covid")

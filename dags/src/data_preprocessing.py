@@ -68,6 +68,11 @@ abbrev_us_state = dict(map(reversed, us_state_abbrev.items()))
 class DataPreprocessing:
 
     def weekly_data(ds, **kwargs) -> None:
+        """
+        Preprocessing weekly data.
+        :param kwargs:
+        :return: None
+        """
         count = 0
         for filename in os.listdir("downloadedData/weekly_data"):
             count += 1
@@ -76,7 +81,7 @@ class DataPreprocessing:
                 data = "data"+str(count)
                 data = pd.read_csv(path)
             except IOError:
-                print('Could not read ' + path)
+                logging.warning('Could not read ' + path)
             truncated_data_name = "weekly_data_file_"+str(count)
             truncated_data = "truncated_data"+str(count)
             truncated_data = data.loc[:, ['End Week', 'State', 'COVID-19 Deaths', 'Pneumonia and COVID-19 Deaths']]
@@ -102,6 +107,11 @@ class DataPreprocessing:
 
 
     def probability_of_new_cases_data(ds, **kwargs) -> None:
+        """
+        Preprocessing downloaded data.
+        :param kwargs:
+        :return: None
+        """
         count = 0
         for filename in os.listdir("downloadedData/probability_of_new_cases_data"):
             count += 1
@@ -110,7 +120,7 @@ class DataPreprocessing:
                 data = "data" + str(count)
                 data = pd.read_csv(path)
             except IOError:
-                print('Could not read ' + path)
+                logging.warning('Could not read ' + path)
             truncated_data_name = "probability_of_new_cases_data_" + str(count)
             truncated_data = "truncated_data" + str(count)
             truncated_data = data.loc[:, ['submission_date', 'state', 'new_case', 'pnew_case', 'new_death', 'prob_death']]
@@ -127,6 +137,11 @@ class DataPreprocessing:
             print("Data copied " + truncated_data_name)
 
     def county_data(ds, **kwargs) -> None:
+        """
+        Preprocessing county data.
+        :param kwargs:
+        :return: None
+        """
         count = 0
         for filename in os.listdir("downloadedData/county_data"):
             count += 1
@@ -135,7 +150,7 @@ class DataPreprocessing:
                 data = "data" + str(count)
                 data = pd.read_csv(path)
             except IOError:
-                print('Could not read ' + path)
+                logging.warning('Could not read ' + path)
 
             fips_dict = dict()
             for i in data['FIPS County Code']:
@@ -174,6 +189,11 @@ class DataPreprocessing:
             print("Data copied " + truncated_data_name)
 
     def age_and_sex_data(ds, **kwargs) -> None:
+        """
+        preprocessing data by age and sex.
+        :param kwargs:
+        :return: None
+        """
         count = 0
         for filename in os.listdir("downloadedData/age_and_sex_data"):
             count += 1
@@ -182,7 +202,7 @@ class DataPreprocessing:
                 data = "data" + str(count)
                 data = pd.read_csv(path)
             except IOError:
-                print('Could not read ' + path)
+                logging.warning('Could not read ' + path)
 
         truncated_data_name = "age_and_sex_data_" + str(count)
         truncated_data = "truncated_data" + str(count)
@@ -218,6 +238,11 @@ class DataPreprocessing:
         print("Data copied " + truncated_data_name)
 
     def place_of_death(ds, **kwargs) -> None:
+        """
+        preprocessing data by place of death.
+        :param kwargs:
+        :return: None
+        """
         count = 0
         for filename in os.listdir("downloadedData/place_of_death"):
             count += 1
@@ -226,7 +251,7 @@ class DataPreprocessing:
                 data = "data" + str(count)
                 data = pd.read_csv(path)
             except IOError:
-                print('Could not read ' + path)
+                logging.warning('Could not read ' + path)
         truncated_data_name = "place_of_death_" + str(count)
         truncated_data = "truncated_data" + str(count)
         truncated_data = data.loc[:, ['State', 'Place of Death', 'COVID19 Deaths', 'Pneumonia and COVID19 Deaths']]
@@ -266,6 +291,11 @@ class DataPreprocessing:
         print("Data copied " + truncated_data_name)
 
     def race_data(ds, **kwargs) -> None:
+        """
+        Preprocessing data by race.
+        :param kwargs:
+        :return: None
+        """
         count = 0
         for filename in os.listdir("downloadedData/race_data"):
             count += 1
@@ -274,7 +304,7 @@ class DataPreprocessing:
                 data = "data" + str(count)
                 data = pd.read_csv(path)
             except IOError:
-                print('Could not read ' + path)
+                logging.warning('Could not read ' + path)
         truncated_data_name = "race_data_" + str(count)
         truncated_data = "truncated_data" + str(count)
         truncated_data = data.loc[:, ['State', 'Age group', 'Race and Hispanic Origin Group', 'COVID-19 Deaths',
