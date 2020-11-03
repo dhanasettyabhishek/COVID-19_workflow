@@ -43,14 +43,21 @@ The flow of the data, is as follows.
 <li>Logging the information if failure occurs.</li>
 <li>Monitored and used Object Oriented Programming in Python</li>
 <li>Used Second Normal Form, while schema designing.</li>
-<li>On and average, it takes 7 seconds to complete the entire process.
-![duration](https://github.com/dhanasettyabhishek/COVID-19_workflow/blob/master/config/other/duration.png?raw=true)</li>
+<li>On and average, it takes 7 seconds to complete the entire process.</li>
 </ol>
+Duration:
+
+![duration](https://github.com/dhanasettyabhishek/COVID-19_workflow/blob/master/config/other/duration.png?raw=true)
+
 
 #### Execution
 
-<ol>
-<li>Clone the repository <a href = "https://github.com/dhanasettyabhishek/COVID-19_workflow.git"/></li>
+<ul>
+<li>Clone the repository:</li>
+
+https://github.com/dhanasettyabhishek/COVID-19_workflow.git
 <li>Using Docker compose, simply run the command docker-compose up</li>
-<li>Visit [link](localhost:8080/admin/) to visit airflow.</li>
-</ol>
+<li>Visit localhost:8080 to visit airflow.</li>
+
+http://localhost:8080/admin/
+</ul>
