@@ -10,12 +10,11 @@ services:
       - "5432:5432"
 
   webserver:
-    image: puckel/docker-airflow:1.10.1
+    image: dhanasetty/covid_workflow
     build:
       context: https://github.com/puckel/docker-airflow.git#1.10.1
       dockerfile: Dockerfile
       args:
-        AIRFLOW_DEPS: gcp_api,s3
         PYTHON_DEPS: sqlalchemy==1.2.0
     restart: always
     depends_on:
@@ -26,8 +25,6 @@ services:
       - FERNET_KEY=jsDPRErfv8Z_eVTnGfF8ywd19j4pyqE3NpdUBA_oRTo=
     volumes:
       - ./dags:/usr/local/airflow/dags
-      # Uncomment to include custom plugins
-      - ./plugins:/usr/local/airflow/plugins
     ports:
       - "8080:8080"
     command: webserver

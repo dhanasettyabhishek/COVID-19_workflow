@@ -20,10 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="89ece285-a490-4cdf-b0bd-685341367bf9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/entrypoint.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dags/dag.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dags/daily_workflow_covid_tracking_system.py" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/dags/src/plot_graphs_for_local_database.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dags/src/pytest_automation/test_load_data_to_postgres.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dags/src/read_data_from_postgres.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dags/daily_covid_cases_tracking_pipeline.py" beforeDir="false" afterPath="$PROJECT_DIR$/dags/daily_covid_cases_tracking_pipeline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dags/src/automation/test_data_preprocessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/dags/src/pytest_automation/test_data_preprocessing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dags/src/automation/test_get_api_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/dags/src/pytest_automation/test_get_api_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dags/src/automation/test_validate_downloaded_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/dags/src/pytest_automation/test_validate_downloaded_data.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dags/src/cleaned_datasets/age_and_sex_data/age_and_sex_data_1.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dags/src/cleaned_datasets/county_data/county_data_1.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dags/src/cleaned_datasets/dependencies/age_groups.csv" beforeDir="false" />
@@ -50,11 +56,8 @@
       <change beforePath="$PROJECT_DIR$/dags/src/downloadedData/probability_of_new_cases_data/probability_of_new_cases_data_file_1.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dags/src/downloadedData/race_data/race_data_file_1.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dags/src/downloadedData/weekly_data/weekly_data_file_1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dags/src/load.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dags/src/load_data_to_postgres.py" beforeDir="false" afterPath="$PROJECT_DIR$/dags/src/load_data_to_postgres.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dags/src/load_to_postgres.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dags/src/transform.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dags/src/validate_downloaded_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/dags/src/validate_downloaded_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +67,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Python Unit Test" />
         <option value="Python Script" />
       </list>
     </option>
@@ -102,7 +106,7 @@
       <workItem from="1604202590733" duration="7350000" />
       <workItem from="1604211933717" duration="18198000" />
       <workItem from="1604277455589" duration="5021000" />
-      <workItem from="1604282638963" duration="44415000" />
+      <workItem from="1604282638963" duration="55910000" />
     </task>
     <servers />
   </component>

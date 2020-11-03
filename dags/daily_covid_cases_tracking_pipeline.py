@@ -14,6 +14,7 @@ from src.get_api_data import GetData
 from src.validate_downloaded_data import Validations
 from src.data_preprocessing import DataPreprocessing
 from src.load_data_to_postgres import LoadData
+from src.read_data_from_postgres import ReadData
 
 # default arguments
 default_args = {
@@ -132,6 +133,14 @@ delete_files_from_local = PythonOperator(
     retries=0
 )
 
+read_data_from_postgres = PythonOperator(
+    task_id="read_data_from_postgres",
+    provide_context=True,
+    python_callable=ReadData.read_data_from_postgres,
+    dag=dag,
+    retries=0
+)
+
 end = DummyOperator(task_id="End", dag=dag)
 
 # Assigning path to tasks
@@ -159,4 +168,4 @@ preprocessing[5] >> data_to_postgres[6]
 for dp in data_to_postgres:
     dp >> delete_files_from_local
 
-delete_files_from_local >> end
+delete_files_from_local >> read_data_from_postgres >> end
