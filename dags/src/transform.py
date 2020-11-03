@@ -2,6 +2,7 @@
 import pandas as pd
 from datetime import timedelta
 import os
+import logging
 
 us_state_abbrev = {
     'Alabama': 'AL',
@@ -85,6 +86,7 @@ class TransformData:
         try:
             os.mkdir("cleaned_datasets")
         except OSError:
+            logging.warning("Unable to create a directory - cleaned_datasets")
             pass
         truncated_data1.to_csv("cleaned_datasets/truncated_data1.csv", index=False)
         print("Data copied")
@@ -203,6 +205,7 @@ class TransformData:
         try:
             os.mkdir("cleaned_datasets")
         except OSError:
+            logging.info
             pass
         truncated_data5.to_csv("cleaned_datasets/truncated_data5.csv", index=False)
         place_of_death.to_csv("cleaned_datasets/place_of_death.csv", index=False)
@@ -236,10 +239,12 @@ class TransformData:
         race.to_csv("cleaned_datasets/race.csv", index=False)
         print("Data copied")
 
+    functions = [read_file1, read_file2, read_file3, read_file4, read_file5, read_file6]
+
+    def process(ds, **kwargs):
+        td = TransformData()
+        for f in td.functions:
+            f(td)
+
 # td = TransformData()
-# td.read_file1()
-# td.read_file2()
-# td.read_file3()
-# td.read_file4()
-# td.read_file5()
-# td.read_file6()
+# td.process()

@@ -28,7 +28,7 @@ default_args = {
 
 # Creating Dag
 dag = DAG(
-    'covid_workflow',
+    'daily_workflow_covid_tracking_system',
     default_args=default_args,
     description='Data Engineering Project',
     schedule_interval='@daily'
@@ -118,6 +118,14 @@ load_data1 = PythonOperator(
     task_id="load_data1",
     provide_context=True,
     python_callable=LoadData.load_data1,
+    dag=dag,
+    retries=0
+)
+
+read_data = PythonOperator(
+    task_id="read_data",
+    provide_context=True,
+    python_callable=LoadData.read_data,
     dag=dag,
     retries=0
 )
@@ -244,7 +252,7 @@ download_data_files >> transform_data_file_5
 
 download_data_files >> transform_data_file_6
 
-transform_data_file_1 >> load_data1
+transform_data_file_1 >> load_data1 >> read_data
 
 transform_data_file_2 >> load_data2
 
@@ -263,7 +271,7 @@ transform_data_file_5 >> load_end_date
 transform_data_file_6 >> load_data6
 transform_data_file_6 >> load_race
 
-load_data1 >> delete_files_from_local
+read_data >> delete_files_from_local
 
 load_data2 >> delete_files_from_local
 

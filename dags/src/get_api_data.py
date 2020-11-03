@@ -2,13 +2,20 @@
 import requests
 import json
 import os
-
+from typing import Tuple, List
 
 
 class GetData:
 
-    def download_url(ds, **kwargs) -> []:
-    # def download_url(self) -> []:
+    def download_url(ds, **kwargs) -> Tuple[List, List]:
+        """
+        Filter's covid data from healthdata,
+        and get the url links to download the
+        filtered data along with the title
+
+        :param kwargs: Keyword argument.
+        :return: list download urls and their titles
+        """
         url = "https://healthdata.gov/data.json"
         titles = []
         req = requests.get(url)
@@ -35,7 +42,12 @@ class GetData:
         return download_urls, titles
 
     def download_data(**kwargs) -> None:
-    # def download_data(self, download_urls, titles) -> None:
+        """
+        Downloads the data from the filtered data.
+        :param kwargs: to get the values from the previous
+        pipeline.
+        :return: None
+        """
         ti = kwargs['ti']
         download_urls, titles = ti.xcom_pull(task_ids='filter_covid_data')
         directory = "dataFiles"
@@ -53,6 +65,10 @@ class GetData:
                 for line in response:
                     file.write(line)
 
+        dir_path = os.path.dirname(os.path.realpath(__file__))
+        cwd = os.getcwd()
+        print(dir_path)
+        print(cwd)
         print("========================> Downloaded " + str(count_path) + " files!")
 
 # getData = GetData()

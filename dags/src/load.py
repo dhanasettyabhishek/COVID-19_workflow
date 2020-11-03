@@ -21,6 +21,22 @@ class LoadData:
         curr.close()
         conn.close()
 
+    def read_data(ds, **kwargs):
+        conn = pgsql.connect(connection)
+        curr = conn.cursor()
+        curr.execute("""
+        SELECT * 
+        FROM covid.truncated_data1
+        LIMIT 10
+        """)
+
+        rows = curr.fetchmany(10)
+        for row in rows:
+            print(row)
+        conn.commit()
+        curr.close()
+        conn.close()
+
     def load_data2(ds, **kwargs):
         conn = pgsql.connect(connection)
         curr = conn.cursor()
