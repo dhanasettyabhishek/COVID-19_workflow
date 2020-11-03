@@ -40,10 +40,10 @@ The flow of the data is as follows.
 <ol>
 <li>The workflow can be scaled to large amounts of data</li>
 <li>Parallelized the workflow, based on the task status</li>
-<li>Logging the information if failure occurs.</li>
-<li>Monitored and used Object Oriented Programming in Python</li>
-<li>Used Second Normal Form, while schema designing.</li>
-<li>On and average, it takes 7 seconds to complete the entire process.</li>
+<li>Logging the information if any failure occurs.</li>
+<li>Monitored and used Object-Oriented Programming in Python</li>
+<li>Used Second Normal Form, for designing a schema.</li>
+<li>On average, it takes 7 seconds to complete the entire process.</li>
 </ol>
 Duration:
 
