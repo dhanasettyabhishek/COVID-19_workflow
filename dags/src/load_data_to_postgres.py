@@ -1,11 +1,5 @@
-import psycopg2 as pgsql
 import os
-from airflow.models import Variable
 from src.postgres_connection import DatabaseConnection
-
-# connection = "dbname={dbname} port = {port} user={user} password={password} host={host}".format(
-#     dbname=Variable.get('dbname'), port=Variable.get('port'), user=Variable.get('user'),
-#     password=Variable.get('password'), host=Variable.get('host'))
 
 
 def load_data_to_postgres(file_path: str, create: str) -> None:
@@ -16,7 +10,6 @@ def load_data_to_postgres(file_path: str, create: str) -> None:
     :return: None
     """
     db = DatabaseConnection()
-    db.cur.execute("CREATE SCHEMA IF NOT EXISTS covid")
     path_ = "cleaned_datasets/" + file_path
     for filename in os.listdir(path_):
         path = path_ + "/" + str(filename)
@@ -86,7 +79,7 @@ class LoadData:
         :return: None
         """
         create = "(state text,place_of_death text,covid_deaths integer,pneumonia_covid_deaths integer)"
-        file_path = "race_data"
+        file_path = "place_of_death"
         load_data_to_postgres(file_path, create)
 
     @staticmethod
@@ -97,7 +90,7 @@ class LoadData:
         :return: None
         """
         create = "(state text,age_groups text,race text,covid_deaths integer,pneumonia_covid_deaths integer)"
-        file_path = "age_and_sex_data"
+        file_path = "race_data"
         load_data_to_postgres(file_path, create)
 
     @staticmethod
@@ -108,7 +101,6 @@ class LoadData:
         :return: None
         """
         db = DatabaseConnection()
-        db.query("CREATE SCHEMA IF NOT EXISTS covid")
         db.query("DROP TABLE IF EXISTS covid.race")
         db.query("""CREATE TABLE covid.race(race text)""")
         with open('cleaned_datasets/dependencies/race.csv', 'r') as f1:
@@ -124,7 +116,6 @@ class LoadData:
         :return: None
         """
         db = DatabaseConnection()
-        db.query("CREATE SCHEMA IF NOT EXISTS covid")
         db.query("DROP TABLE IF EXISTS covid.start")
         db.query("""CREATE TABLE covid.start(start_date date)""")
         with open('cleaned_datasets/dependencies/start.csv', 'r') as f1:
@@ -140,7 +131,6 @@ class LoadData:
         :return: None
         """
         db = DatabaseConnection()
-        db.query("CREATE SCHEMA IF NOT EXISTS covid")
         db.query("DROP TABLE IF EXISTS covid.end")
         db.query("""CREATE TABLE covid.end(end_date date)""")
         with open('cleaned_datasets/dependencies/end.csv', 'r') as f1:
@@ -156,7 +146,6 @@ class LoadData:
         :return: None
         """
         db = DatabaseConnection()
-        db.query("CREATE SCHEMA IF NOT EXISTS covid")
         db.query("DROP TABLE IF EXISTS covid.place_of_death")
         db.query("""CREATE TABLE covid.place_of_death(place_of_death text)""")
         with open('cleaned_datasets/dependencies/place_of_death.csv', 'r') as f1:
@@ -172,7 +161,6 @@ class LoadData:
         :return: None
         """
         db = DatabaseConnection()
-        db.query("CREATE SCHEMA IF NOT EXISTS covid")
         db.query("DROP TABLE IF EXISTS covid.sex")
         db.query("""CREATE TABLE covid.sex(sex text)""")
         with open('cleaned_datasets/dependencies/sex.csv', 'r') as f1:
@@ -188,7 +176,6 @@ class LoadData:
         :return: None
         """
         db = DatabaseConnection()
-        db.query("CREATE SCHEMA IF NOT EXISTS covid")
         db.query("DROP TABLE IF EXISTS covid.age_groups")
         db.query("""CREATE TABLE covid.age_groups(age_groups text)""")
         with open('cleaned_datasets/dependencies/age_groups.csv', 'r') as f1:
@@ -204,7 +191,6 @@ class LoadData:
         :return: None
         """
         db = DatabaseConnection()
-        db.query("CREATE SCHEMA IF NOT EXISTS covid")
         db.query("DROP TABLE IF EXISTS covid.states")
         db.query("""CREATE TABLE covid.states(
             fips_code integer,

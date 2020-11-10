@@ -16,6 +16,7 @@ class DatabaseConnection:
                                                 host=Variable.get('host')))
 
         self.cur = self.connection.cursor()
+        self.cur.execute("CREATE SCHEMA IF NOT EXISTS covid")
 
     def query(self, query):
         """
