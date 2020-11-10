@@ -55,7 +55,7 @@ RUN set -ex \
         /usr/share/doc \
         /usr/share/doc-base
 
-COPY https://raw.githubusercontent.com/dhanasettyabhishek/COVID-19_workflow/master/scripts/entrypoint.sh /entrypoint.sh
+ADD https://raw.githubusercontent.com/dhanasettyabhishek/COVID-19_workflow/master/scripts/entrypoint.sh /entrypoint.sh
 COPY config/airflow.cfg ${AIRFLOW_USER_HOME}/airflow.cfg
 
 RUN chmod +x /entrypoint.sh
