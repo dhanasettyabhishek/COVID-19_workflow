@@ -55,10 +55,9 @@ RUN set -ex \
         /usr/share/doc \
         /usr/share/doc-base
 
-ADD https://raw.githubusercontent.com/dhanasettyabhishek/COVID-19_workflow/master/scripts/entrypoint.sh /entrypoint.sh
-ADD https://raw.githubusercontent.com/dhanasettyabhishek/COVID-19_workflow/master/config/airflow.cfg ${AIRFLOW_USER_HOME}/airflow.cfg
+COPY scripts/entrypoint.sh /entrypoint.sh
+COPY config/airflow.cfg ${AIRFLOW_USER_HOME}/airflow.cfg
 
-RUN chmod +x /entrypoint.sh
 RUN chown -R airflow: ${AIRFLOW_USER_HOME}
 
 EXPOSE 8080 5555 8793

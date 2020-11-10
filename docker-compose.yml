@@ -12,7 +12,7 @@ services:
   webserver:
     image: dhanasetty/covid_workflow
     build:
-      context: https://raw.githubusercontent.com/dhanasettyabhishek/COVID-19_workflow/master/Dockerfile
+      context: https://github.com/puckel/docker-airflow.git#1.10.1
       dockerfile: Dockerfile
       args:
         PYTHON_DEPS: sqlalchemy==1.2.0

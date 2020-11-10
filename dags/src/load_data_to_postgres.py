@@ -1,10 +1,12 @@
 import psycopg2 as pgsql
 import os
 from airflow.models import Variable
+from src.postgres_connection import DatabaseConnection
 
-connection = "dbname={dbname} port = {port} user={user} password={password} host={host}".format(
-    dbname=Variable.get('dbname'), port=Variable.get('port'), user=Variable.get('user'),
-    password=Variable.get('password'), host=Variable.get('host'))
+# connection = "dbname={dbname} port = {port} user={user} password={password} host={host}".format(
+#     dbname=Variable.get('dbname'), port=Variable.get('port'), user=Variable.get('user'),
+#     password=Variable.get('password'), host=Variable.get('host'))
+
 
 def load_data_to_postgres(file_path: str, create: str) -> None:
     """
@@ -13,24 +15,21 @@ def load_data_to_postgres(file_path: str, create: str) -> None:
     :param create: SQL query
     :return: None
     """
-    conn = pgsql.connect(connection)
-    curr = conn.cursor()
-    curr.execute("CREATE SCHEMA IF NOT EXISTS covid")
+    db = DatabaseConnection()
+    db.cur.execute("CREATE SCHEMA IF NOT EXISTS covid")
     path_ = "cleaned_datasets/" + file_path
     for filename in os.listdir(path_):
         path = path_ + "/" + str(filename)
         split_ = str(filename).split(".")
         name = "covid." + split_[0]
         drop = "DROP TABLE IF EXISTS " + name
-        curr.execute(str(drop))
+        db.query(str(drop))
         create = "CREATE TABLE " + name + create
-        curr.execute(str(create))
+        db.query(str(create))
         with open(path, 'r') as f1:
             next(f1)  # Skip the header row.
-            curr.copy_from(f1, name, sep=',')
-    conn.commit()
-    curr.close()
-    conn.close()
+            db.cur.copy_from(f1, name, sep=',')
+    db.close()
 
 
 class LoadData:
@@ -108,18 +107,14 @@ class LoadData:
         :param kwargs: keyword argument
         :return: None
         """
-        conn = pgsql.connect(connection)
-        curr = conn.cursor()
-        curr.execute("CREATE SCHEMA IF NOT EXISTS covid")
-        curr.execute("DROP TABLE IF EXISTS covid.race")
-        curr.execute("""CREATE TABLE covid.race(
-            race text)""")
+        db = DatabaseConnection()
+        db.query("CREATE SCHEMA IF NOT EXISTS covid")
+        db.query("DROP TABLE IF EXISTS covid.race")
+        db.query("""CREATE TABLE covid.race(race text)""")
         with open('cleaned_datasets/dependencies/race.csv', 'r') as f1:
             next(f1)  # Skip the header row.
-            curr.copy_from(f1, 'covid.race', sep=',')
-        conn.commit()
-        curr.close()
-        conn.close()
+            db.cur.copy_from(f1, 'covid.race', sep=',')
+        db.close()
 
     @staticmethod
     def start_week(**kwargs: dict) -> None:
@@ -128,18 +123,14 @@ class LoadData:
         :param kwargs: keyword argument
         :return: None
         """
-        conn = pgsql.connect(connection)
-        curr = conn.cursor()
-        curr.execute("CREATE SCHEMA IF NOT EXISTS covid")
-        curr.execute("DROP TABLE IF EXISTS covid.start")
-        curr.execute("""CREATE TABLE covid.start(
-            start_date date)""")
+        db = DatabaseConnection()
+        db.query("CREATE SCHEMA IF NOT EXISTS covid")
+        db.query("DROP TABLE IF EXISTS covid.start")
+        db.query("""CREATE TABLE covid.start(start_date date)""")
         with open('cleaned_datasets/dependencies/start.csv', 'r') as f1:
             next(f1)  # Skip the header row.
-            curr.copy_from(f1, 'covid.start', sep=',')
-        conn.commit()
-        curr.close()
-        conn.close()
+            db.cur.copy_from(f1, 'covid.start', sep=',')
+        db.close()
 
     @staticmethod
     def end_week(**kwargs: dict) -> None:
@@ -148,19 +139,14 @@ class LoadData:
         :param kwargs: keyword argument
         :return: None
         """
-        conn = pgsql.connect(connection)
-        curr = conn.cursor()
-        curr.execute("CREATE SCHEMA IF NOT EXISTS covid")
-        curr.execute("DROP TABLE IF EXISTS covid.end")
-        curr.execute("""CREATE TABLE covid.end(
-            end_date date)
-            """)
+        db = DatabaseConnection()
+        db.query("CREATE SCHEMA IF NOT EXISTS covid")
+        db.query("DROP TABLE IF EXISTS covid.end")
+        db.query("""CREATE TABLE covid.end(end_date date)""")
         with open('cleaned_datasets/dependencies/end.csv', 'r') as f1:
             next(f1)  # Skip the header row.
-            curr.copy_from(f1, 'covid.end', sep=',')
-        conn.commit()
-        curr.close()
-        conn.close()
+            db.cur.copy_from(f1, 'covid.end', sep=',')
+        db.close()
 
     @staticmethod
     def unique_place_of_death(**kwargs: dict) -> None:
@@ -169,18 +155,14 @@ class LoadData:
         :param kwargs: keyword argument
         :return: None
         """
-        conn = pgsql.connect(connection)
-        curr = conn.cursor()
-        curr.execute("CREATE SCHEMA IF NOT EXISTS covid")
-        curr.execute("DROP TABLE IF EXISTS covid.place_of_death")
-        curr.execute("""CREATE TABLE covid.place_of_death(
-            place_of_death text)""")
+        db = DatabaseConnection()
+        db.query("CREATE SCHEMA IF NOT EXISTS covid")
+        db.query("DROP TABLE IF EXISTS covid.place_of_death")
+        db.query("""CREATE TABLE covid.place_of_death(place_of_death text)""")
         with open('cleaned_datasets/dependencies/place_of_death.csv', 'r') as f1:
             next(f1)  # Skip the header row.
-            curr.copy_from(f1, 'covid.place_of_death')
-        conn.commit()
-        curr.close()
-        conn.close()
+            db.cur.copy_from(f1, 'covid.place_of_death')
+        db.close()
 
     @staticmethod
     def sex(**kwargs) -> None:
@@ -189,18 +171,14 @@ class LoadData:
         :param kwargs: keyword argument
         :return: None
         """
-        conn = pgsql.connect(connection)
-        curr = conn.cursor()
-        curr.execute("CREATE SCHEMA IF NOT EXISTS covid")
-        curr.execute("DROP TABLE IF EXISTS covid.sex")
-        curr.execute("""CREATE TABLE covid.sex(
-            sex text)""")
+        db = DatabaseConnection()
+        db.query("CREATE SCHEMA IF NOT EXISTS covid")
+        db.query("DROP TABLE IF EXISTS covid.sex")
+        db.query("""CREATE TABLE covid.sex(sex text)""")
         with open('cleaned_datasets/dependencies/sex.csv', 'r') as f1:
             next(f1)  # Skip the header row.
-            curr.copy_from(f1, 'covid.sex', sep=',')
-        conn.commit()
-        curr.close()
-        conn.close()
+            db.cur.copy_from(f1, 'covid.sex', sep=',')
+        db.close()
 
     @staticmethod
     def age_groups(**kwargs) -> None:
@@ -209,18 +187,14 @@ class LoadData:
         :param kwargs: keyword argument
         :return: None
         """
-        conn = pgsql.connect(connection)
-        curr = conn.cursor()
-        curr.execute("CREATE SCHEMA IF NOT EXISTS covid")
-        curr.execute("DROP TABLE IF EXISTS covid.age_groups")
-        curr.execute("""CREATE TABLE covid.age_groups(
-            age_groups text)""")
+        db = DatabaseConnection()
+        db.query("CREATE SCHEMA IF NOT EXISTS covid")
+        db.query("DROP TABLE IF EXISTS covid.age_groups")
+        db.query("""CREATE TABLE covid.age_groups(age_groups text)""")
         with open('cleaned_datasets/dependencies/age_groups.csv', 'r') as f1:
             next(f1)  # Skip the header row.
-            curr.copy_from(f1, 'covid.age_groups', sep=',')
-        conn.commit()
-        curr.close()
-        conn.close()
+            db.cur.copy_from(f1, 'covid.age_groups', sep=',')
+        db.close()
 
     @staticmethod
     def states(**kwargs) -> None:
@@ -229,11 +203,10 @@ class LoadData:
         :param kwargs: keyword argument
         :return: None
         """
-        conn = pgsql.connect(connection)
-        curr = conn.cursor()
-        curr.execute("CREATE SCHEMA IF NOT EXISTS covid")
-        curr.execute("DROP TABLE IF EXISTS covid.states")
-        curr.execute("""CREATE TABLE covid.states(
+        db = DatabaseConnection()
+        db.query("CREATE SCHEMA IF NOT EXISTS covid")
+        db.query("DROP TABLE IF EXISTS covid.states")
+        db.query("""CREATE TABLE covid.states(
             fips_code integer,
             county text,
             state text,
@@ -241,7 +214,5 @@ class LoadData:
             """)
         with open('cleaned_datasets/dependencies/states.csv', 'r') as f1:
             next(f1)  # Skip the header row.
-            curr.copy_from(f1, 'covid.states', sep=',')
-        conn.commit()
-        curr.close()
-        conn.close()
+            db.cur.copy_from(f1, 'covid.states', sep=',')
+        db.close()

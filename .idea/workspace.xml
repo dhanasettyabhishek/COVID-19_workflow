@@ -20,7 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="89ece285-a490-4cdf-b0bd-685341367bf9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/dags/src/postgres_connection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dags/daily_covid_cases_tracking_pipeline.py" beforeDir="false" afterPath="$PROJECT_DIR$/dags/daily_covid_cases_tracking_pipeline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dags/src/load_data_to_postgres.py" beforeDir="false" afterPath="$PROJECT_DIR$/dags/src/load_data_to_postgres.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dags/src/read_data_from_postgres.py" beforeDir="false" afterPath="$PROJECT_DIR$/dags/src/read_data_from_postgres.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +80,7 @@
       <workItem from="1604282638963" duration="60361000" />
       <workItem from="1604799800730" duration="920000" />
       <workItem from="1604801007882" duration="6000" />
-      <workItem from="1604982487496" duration="9400000" />
+      <workItem from="1604982487496" duration="12089000" />
     </task>
     <servers />
   </component>
