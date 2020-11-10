@@ -24,8 +24,8 @@ if [ -e "/requirements.txt" ]; then
     $(command -v pip) install --user -r /requirements.txt
 fi
 
-if [ -e "configuration.json" ]; then
-  airflow variables --import configuration.json
+if [ -e "/configuration.json" ]; then
+  airflow variables --import /configuration.json
 fi
 
 wait_for_port() {
