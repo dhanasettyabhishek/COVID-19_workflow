@@ -1,7 +1,6 @@
 # import libraries
 from datetime import timedelta
 import os
-from types import FunctionType
 
 # Airflow
 import airflow
@@ -11,6 +10,7 @@ from airflow.operators.python_operator import PythonOperator
 
 # Python files
 from src.get_api_data import GetData
+from src.download_files import DownloadData
 from src.validate_downloaded_data import Validations
 from src.data_preprocessing import DataPreprocessing
 from src.load_data_to_postgres import LoadData
@@ -43,15 +43,15 @@ start = DummyOperator(task_id="Start", dag=dag)
 filter_covid_data = PythonOperator(
     task_id="filter_covid_data",
     provide_context=True,
-    python_callable=GetData.download_url,
+    python_callable=GetData.filter_data,
     dag=dag,
     retries=0
 )
 
-download_data_files = PythonOperator(
-    task_id="download_data_files",
+download_files = PythonOperator(
+    task_id="download_files",
     provide_context=True,
-    python_callable=GetData.download_data,
+    python_callable=DownloadData.download_files,
     dag=dag,
     retries=0
 )
@@ -64,16 +64,15 @@ validating_downloaded_data = PythonOperator(
     retries=0
 )
 
-
 data_preprocessing_ = []
-for x, y in DataPreprocessing.__dict__.items():
-    if type(y) == FunctionType:
-        data_preprocessing_.append(x)
+for key, value in DataPreprocessing.__dict__.items():
+    if type(value) == staticmethod:
+        data_preprocessing_.append(key)
 
 preprocessing = []
 for dp in data_preprocessing_:
-    name = "DataPreprocessing."+dp
-    load_ = "load_"+str(dp)
+    name = "DataPreprocessing." + dp
+    load_ = "load_" + str(dp)
     dp = PythonOperator(
         task_id=dp,
         provide_context=True,
@@ -85,12 +84,12 @@ for dp in data_preprocessing_:
 
 load_data_to_postgres = []
 for x, y in LoadData.__dict__.items():
-    if type(y) == FunctionType:
+    if type(y) == staticmethod:
         load_data_to_postgres.append(x)
 
 data_to_postgres = []
 for ld in load_data_to_postgres:
-    name = "LoadData."+ld
+    name = "LoadData." + ld
     ld = PythonOperator(
         task_id=ld,
         provide_context=True,
@@ -100,18 +99,6 @@ for ld in load_data_to_postgres:
     )
     data_to_postgres.append(ld)
 
-
-
-def delete_file(ds, **kwargs):
-    try:
-        os.remove("dataFiles")
-        os.remove("cleaned_datasets")
-        dir_path = os.path.dirname(os.path.realpath(__file__))
-        cwd = os.getcwd()
-        print(dir_path)
-        print(cwd)
-    except OSError:
-        pass
 
 def delete_file(ds, **kwargs):
     try:
@@ -124,6 +111,7 @@ def delete_file(ds, **kwargs):
         print(cwd)
     except OSError:
         pass
+
 
 delete_files_from_local = PythonOperator(
     task_id="delete_files",
@@ -145,7 +133,7 @@ end = DummyOperator(task_id="End", dag=dag)
 
 # Assigning path to tasks
 
-start >> filter_covid_data >> download_data_files >> validating_downloaded_data
+start >> filter_covid_data >> download_files >> validating_downloaded_data
 
 for pp in preprocessing:
     validating_downloaded_data >> pp

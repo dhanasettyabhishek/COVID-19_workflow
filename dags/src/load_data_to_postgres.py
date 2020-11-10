@@ -1,11 +1,12 @@
 import psycopg2 as pgsql
 import os
+from airflow.models import Variable
 
+connection = "dbname={dbname} port = {port} user={user} password={password} host={host}".format(
+    dbname=Variable.get('dbname'), port=Variable.get('port'), user=Variable.get('user'),
+    password=Variable.get('password'), host=Variable.get('host'))
 
-connection = "dbname=airflow port = 5432 user=airflow password=airflow host=postgres"
-# connection = "dbname=covid_workflow port = 5432 user=postgres password=abhishek host=localhost"
-
-def load_data_to_postgres(file_path:str, create:str) -> None:
+def load_data_to_postgres(file_path: str, create: str) -> None:
     """
     Loads data to postgresSQL.
     :param file_path: path
@@ -15,14 +16,14 @@ def load_data_to_postgres(file_path:str, create:str) -> None:
     conn = pgsql.connect(connection)
     curr = conn.cursor()
     curr.execute("CREATE SCHEMA IF NOT EXISTS covid")
-    path_ = "cleaned_datasets/"+file_path
+    path_ = "cleaned_datasets/" + file_path
     for filename in os.listdir(path_):
-        path = path_+"/" + str(filename)
+        path = path_ + "/" + str(filename)
         split_ = str(filename).split(".")
         name = "covid." + split_[0]
         drop = "DROP TABLE IF EXISTS " + name
         curr.execute(str(drop))
-        create = "CREATE TABLE "+name+create
+        create = "CREATE TABLE " + name + create
         curr.execute(str(create))
         with open(path, 'r') as f1:
             next(f1)  # Skip the header row.
@@ -34,7 +35,8 @@ def load_data_to_postgres(file_path:str, create:str) -> None:
 
 class LoadData:
 
-    def load_weekly_data(ds, **kwargs)->None:
+    @staticmethod
+    def load_weekly_data(**kwargs: dict) -> None:
         """
         Loads weekly data to PostgresSQL.
         :param kwargs: keyword argument
@@ -44,9 +46,10 @@ class LoadData:
         file_path = "weekly_data"
         load_data_to_postgres(file_path, create)
 
-    def load_probability_of_new_cases_data(ds, **kwargs)->None:
+    @staticmethod
+    def load_probability_of_new_cases_data(**kwargs: dict) -> None:
         """
-        Loads probability data to PostgresSQL.
+        Loads probability information to PostgresSQL.
         :param kwargs: keyword argument
         :return: None
         """
@@ -54,7 +57,8 @@ class LoadData:
         file_path = "probability_of_new_cases_data"
         load_data_to_postgres(file_path, create)
 
-    def load_county_data(ds, **kwargs)->None:
+    @staticmethod
+    def load_county_data(**kwargs: dict) -> None:
         """
         Loads county data to PostgresSQL.
         :param kwargs: keyword argument
@@ -64,7 +68,8 @@ class LoadData:
         file_path = "county_data"
         load_data_to_postgres(file_path, create)
 
-    def load_age_and_sex_data(ds, **kwargs)->None:
+    @staticmethod
+    def load_age_and_sex_data(**kwargs: dict) -> None:
         """
         Loads age and sex data to PostgresSQL.
         :param kwargs: keyword argument
@@ -74,29 +79,32 @@ class LoadData:
         create = "(state text,sex text,age_groups text,covid_deaths integer,pneumonia_covid_deaths integer)"
         load_data_to_postgres(file_path, create)
 
-    def load_place_of_death(ds, **kwargs)->None:
+    @staticmethod
+    def load_place_of_death(**kwargs: dict) -> None:
         """
-        Loads place of death data to PostgresSQL.
+        Loads place of death information to PostgresSQL.
         :param kwargs: keyword argument
         :return: None
         """
-        file_path = "place_of_death"
         create = "(state text,place_of_death text,covid_deaths integer,pneumonia_covid_deaths integer)"
+        file_path = "place_of_death"
         load_data_to_postgres(file_path, create)
 
-    def load_race_data(ds, **kwargs)->None:
+    @staticmethod
+    def load_race_data(**kwargs: dict) -> None:
         """
         Loads race data to PostgresSQL.
         :param kwargs: keyword argument
         :return: None
         """
-        file_path = "age_and_sex_data"
         create = "(state text,age_groups text,race text,covid_deaths integer,pneumonia_covid_deaths integer)"
+        file_path = "age_and_sex_data"
         load_data_to_postgres(file_path, create)
 
-    def race(ds, **kwargs)->None:
+    @staticmethod
+    def race(**kwargs: dict) -> None:
         """
-        Loads different race type into PostgresSQL.
+        Loads different race type information into PostgresSQL.
         :param kwargs: keyword argument
         :return: None
         """
@@ -113,7 +121,8 @@ class LoadData:
         curr.close()
         conn.close()
 
-    def start(ds, **kwargs)->None:
+    @staticmethod
+    def start_week(**kwargs: dict) -> None:
         """
         Loads start date into PostgresSQL.
         :param kwargs: keyword argument
@@ -132,7 +141,8 @@ class LoadData:
         curr.close()
         conn.close()
 
-    def end(ds, **kwargs)->None:
+    @staticmethod
+    def end_week(**kwargs: dict) -> None:
         """
         Loads end date into PostgresSQL.
         :param kwargs: keyword argument
@@ -152,7 +162,8 @@ class LoadData:
         curr.close()
         conn.close()
 
-    def place_of_death_postgres(ds, **kwargs)->None:
+    @staticmethod
+    def unique_place_of_death(**kwargs: dict) -> None:
         """
         Loads unique place of deaths into PostgresSQL.
         :param kwargs: keyword argument
@@ -171,7 +182,8 @@ class LoadData:
         curr.close()
         conn.close()
 
-    def sex(ds, **kwargs)->None:
+    @staticmethod
+    def sex(**kwargs) -> None:
         """
         Loads unique sex listed into PostgresSQL.
         :param kwargs: keyword argument
@@ -190,7 +202,8 @@ class LoadData:
         curr.close()
         conn.close()
 
-    def age_groups(ds, **kwargs)->None:
+    @staticmethod
+    def age_groups(**kwargs) -> None:
         """
         Loads unique age groups into PostgresSQL.
         :param kwargs: keyword argument
@@ -209,7 +222,8 @@ class LoadData:
         curr.close()
         conn.close()
 
-    def states(ds, **kwargs)->None:
+    @staticmethod
+    def states(**kwargs) -> None:
         """
         Loads unique states into PostgresSQL.
         :param kwargs: keyword argument
@@ -231,20 +245,3 @@ class LoadData:
         conn.commit()
         curr.close()
         conn.close()
-
-
-
-# ld = LoadData()
-# ld.load_county_data()
-# ld.load_probability_of_new_cases_data()
-# ld.load_age_and_sex_data()
-# ld.load_weekly_data()
-# ld.load_place_of_death()
-# ld.load_race_data()
-# ld.race()
-# ld.states()
-# ld.start()
-# ld.end()
-# ld.sex()
-# ld.place_of_death_postgres()
-# ld.age_groups()

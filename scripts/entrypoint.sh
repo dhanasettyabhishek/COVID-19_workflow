@@ -24,6 +24,10 @@ if [ -e "/requirements.txt" ]; then
     $(command -v pip) install --user -r /requirements.txt
 fi
 
+if [ -e "configuration.json" ]; then
+  airflow variables --import configuration.json
+fi
+
 wait_for_port() {
   local name="$1" host="$2" port="$3"
   local j=0
