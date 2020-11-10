@@ -86,7 +86,7 @@ class LoadData:
         :return: None
         """
         create = "(state text,place_of_death text,covid_deaths integer,pneumonia_covid_deaths integer)"
-        file_path = "place_of_death"
+        file_path = "race_data"
         load_data_to_postgres(file_path, create)
 
     @staticmethod

@@ -56,8 +56,8 @@ Duration:
 <li>Clone the repository:</li>
 
 https://github.com/dhanasettyabhishek/COVID-19_workflow.git
-<li>Using Docker compose, simply run the command docker-compose up</li>
-<li>Visit localhost:8080 to visit airflow.</li>
+<li>Using docker compose, simply run the command 'docker-compose up'</li>
+<li>Visit localhost:8080 to trigger the pipeline in airflow.</li>
 
 http://localhost:8080/admin/
 </ul>

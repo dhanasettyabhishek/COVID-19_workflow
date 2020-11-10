@@ -106,10 +106,6 @@ def delete_file(ds, **kwargs):
         os.remove("dataFiles")
         os.remove("cleaned_datasets")
         os.remove("downloadedData")
-        dir_path = os.path.dirname(os.path.realpath(__file__))
-        cwd = os.getcwd()
-        print(dir_path)
-        print(cwd)
     except OSError:
         pass
 
