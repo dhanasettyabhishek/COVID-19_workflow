@@ -40,6 +40,7 @@ RUN set -ex \
     && pip install plotly \
     && pip install pyOpenSSL \
     && pip install ndg-httpsclient \
+    && pip install SQLAlchemy==1.3.15 \
     && pip install pyasn1 \
     && pip install apache-airflow[crypto,postgres,jdbc,ssh${AIRFLOW_DEPS:+,}${AIRFLOW_DEPS}]==${AIRFLOW_VERSION} \
     && if [ -n "${PYTHON_DEPS}" ]; then pip install ${PYTHON_DEPS}; fi \
@@ -54,9 +55,10 @@ RUN set -ex \
         /usr/share/doc \
         /usr/share/doc-base
 
-COPY scripts/entrypoint.sh /entrypoint.sh
+COPY https://raw.githubusercontent.com/dhanasettyabhishek/COVID-19_workflow/master/scripts/entrypoint.sh /entrypoint.sh
 COPY config/airflow.cfg ${AIRFLOW_USER_HOME}/airflow.cfg
 
+RUN chmod +x /entrypoint.sh
 RUN chown -R airflow: ${AIRFLOW_USER_HOME}
 
 EXPOSE 8080 5555 8793

@@ -7,6 +7,7 @@ import airflow
 from airflow import DAG
 from airflow.operators.dummy_operator import DummyOperator
 from airflow.operators.python_operator import PythonOperator
+from airflow.models import Variable
 
 # Python files
 from src.get_api_data import GetData
@@ -35,6 +36,7 @@ dag = DAG(
     description='Data Engineering Project',
     schedule_interval='@daily'
 )
+
 
 # Creating Tasks
 
